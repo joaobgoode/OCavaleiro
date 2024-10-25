@@ -533,3 +533,6 @@ y_sort_enabled = true
 
 [node name="Player" type="Node2D" parent="."]
 y_sort_enabled = true
+
+[node name="buildingss" type="Node2D" parent="."]
+y_sort_enabled = true

@@ -11,7 +11,9 @@ texture = ExtResource("2_00qne")
 offset = Vector2(23.2, -2.8)
 
 [node name="CollisionShape2D" parent="." index="1"]
+visible = false
 position = Vector2(88.5, -97.5)
 
 [node name="CollisionShape2D2" parent="." index="2"]
+visible = false
 position = Vector2(-60.25, -77.5)
