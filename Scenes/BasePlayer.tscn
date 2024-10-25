@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dml15r1s213m3"]
+
+[ext_resource type="Script" path="res://Scenes/base_player.gd" id="1_d7v17"]
+
+[node name="BasePlayer" type="CharacterBody2D" node_paths=PackedStringArray("animation", "texture")]
+collision_mask = 6
+script = ExtResource("1_d7v17")
+animation = NodePath("AnimationPlayer")
+texture = NodePath("Texture")
+
+[node name="Texture" type="Sprite2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="ActionArea" type="Area2D" parent="."]
+
+[connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://nu7pt6iftjqa"]
+
+[ext_resource type="Texture2D" uid="uid://cd3o72wmdy4up" path="res://Assets/sprites/buildings/FENCE 2 - DAY.png" id="1_bakdu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3js3m"]
+radius = 3.0
+
+[node name="Fence1" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("1_bakdu")
+offset = Vector2(0, -5)
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_3js3m")

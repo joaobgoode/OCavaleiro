@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdx41c0vynvei"]
+
+[ext_resource type="Script" path="res://mine.gd" id="1_4i4j5"]
+[ext_resource type="Texture2D" uid="uid://pro8chg2a1n7" path="res://Assets/sprites/scenery/Gold Mine/GoldMine_Inactive.png" id="2_a2bsx"]
+[ext_resource type="PackedScene" uid="uid://w2cj42r3g5kq" path="res://Scenes/entrada.tscn" id="3_yvsgy"]
+[ext_resource type="Script" path="res://Scenes/portal.gd" id="4_pk1ky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwis0"]
+size = Vector2(64, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txckk"]
+size = Vector2(58, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0sf1"]
+size = Vector2(30, 27)
+
+[node name="Mine" type="StaticBody2D" node_paths=PackedStringArray("entrada")]
+y_sort_enabled = true
+scale = Vector2(1.5, 1.5)
+collision_layer = 4
+script = ExtResource("1_4i4j5")
+entrada = NodePath("Entrada")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a2bsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-46, 7.5)
+shape = SubResource("RectangleShape2D_pwis0")
+
+[node name="Entrada" parent="." instance=ExtResource("3_yvsgy")]
+position = Vector2(1.33333, 27.3333)
+script = ExtResource("4_pk1ky")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(46, 6.5)
+shape = SubResource("RectangleShape2D_txckk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.33333, -6.66666)
+shape = SubResource("RectangleShape2D_w0sf1")

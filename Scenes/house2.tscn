@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kbnqmw13ahh"]
+
+[ext_resource type="PackedScene" uid="uid://pbtyx02bn5yf" path="res://Scenes/church.tscn" id="1_5mop0"]
+[ext_resource type="Texture2D" uid="uid://c73x0ijdvsb3y" path="res://Assets/sprites/buildings/HOUSE 2 - DAY.png" id="2_00qne"]
+
+[node name="Buildings" instance=ExtResource("1_5mop0")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-58, -113)
+texture = ExtResource("2_00qne")
+offset = Vector2(23.2, -2.8)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(88.5, -97.5)
+
+[node name="CollisionShape2D2" parent="." index="2"]
+position = Vector2(-60.25, -77.5)

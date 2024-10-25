@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkj4caw6veqd2"]
+
+[ext_resource type="Texture2D" uid="uid://cm1v803vijaqm" path="res://Assets/sprites/objects/Deco/18.png" id="1_cs6jc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cs74d"]
+radius = 16.0
+
+[node name="Espantalho" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -3)
+texture = ExtResource("1_cs6jc")
+offset = Vector2(-1, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_cs74d")

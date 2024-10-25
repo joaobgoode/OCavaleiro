@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://pbtyx02bn5yf"]
+
+[ext_resource type="Texture2D" uid="uid://crc3u2rrkan3l" path="res://Assets/sprites/buildings/CHURCH - DAY.png" id="1_qugcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv30"]
+size = Vector2(46.0176, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78lu3"]
+size = Vector2(157.25, 42)
+
+[node name="Buildings" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -107)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_qugcc")
+offset = Vector2(0.4, -5.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0.999992, -78)
+scale = Vector2(6.78001, -2.61363)
+shape = SubResource("RectangleShape2D_0uv30")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.375, -25)
+shape = SubResource("RectangleShape2D_78lu3")

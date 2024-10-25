@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltqy766nlvm0"]
+
+[ext_resource type="Texture2D" uid="uid://dt4xeny2jugit" path="res://Assets/sprites/buildings/HOUSE 1 - DAY.png" id="1_ws0j6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a01c1"]
+size = Vector2(64.4, 41)
+
+[node name="Buildings" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_ws0j6")
+offset = Vector2(0, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-0.5, -51)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_a01c1")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://doyqb61mw1e2p"]
+
+[ext_resource type="Texture2D" uid="uid://bkmflgvtfvoll" path="res://Assets/sprites/buildings/Stable.png" id="1_p5l73"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wl2jp"]
+size = Vector2(222, 224)
+
+[node name="Stable" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -172)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_p5l73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, -112)
+shape = SubResource("RectangleShape2D_wl2jp")
